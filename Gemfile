@@ -10,7 +10,6 @@ gem 'hamlit'
 gem 'hamlit-block', '~> 0.6.0'
 
 gem 'listen', '~> 3.1', '>= 3.1.5', require: false
-gem 'auto_reloader', '~> 0.4.1', require: false
 
 gem 'byebug', '~> 11.0', '>= 11.0.1'
 gem 'pry', '~> 0.12.2'
