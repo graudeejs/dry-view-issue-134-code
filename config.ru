@@ -4,7 +4,7 @@ Loader.enable_reloading
 Loader.setup
 
 require 'listen'
-Listen.to(File.expand_path('lib', __dir__)) do |added, modified, removed|
+Listen.to(File.expand_path('lib', __dir__)) do |modified, added, removed|
   print "Reloading!\n"
   Loader.reload
 end.start
