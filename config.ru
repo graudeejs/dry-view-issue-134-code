@@ -12,8 +12,11 @@ AutoReloader.activate reloadable_paths: [__dir__], delay: 1
 # end.start
 
 run lambda { |env|
-  AutoReloader.reload! do |_unloaded|
-    Loader.reload
+  AutoReloader.reload! do |unloaded|
+    if unloaded
+      print "reloaded\n"
+      Loader.reload
+    end
     App::Web::Routes.call env
   end
 }
